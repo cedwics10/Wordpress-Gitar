@@ -1,0 +1,66 @@
+/*
+Theme Name:   Gitare
+Theme URI:    http://example.com/gitare/
+Description:  Mon thème à moi
+Author:       Cedwics10
+Author URI:   http://example.com
+Template:     twentytwentyone
+Version:      1.0.0
+License:      GNU General Public License v2 or later
+License URI:  http://www.gnu.org/licenses/gpl-2.0.html
+Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  twenty-fifteen-child
+*/
+
+a {
+    text-decoration: none;
+    color: green;
+}
+
+a:hover {
+    color: black;
+}
+
+#site-navigation a {
+    color: green;
+    text-decoration: none;
+}
+
+#site-navigation a:hover {
+    color: black;
+
+}
+
+.site-branding {
+    width: 200%;
+    text-align: center;
+    padding: 15px;
+}
+
+
+h1.site-title {
+    color: black;
+    font-size: 60px;
+    font-family: cursive;
+}
+
+.custom_logo {
+    all: unset !important;
+}
+
+@media (max-width: 800px) {
+
+    .gitare_logo img {
+        max-width: 50%;
+        text-align: center;
+
+    }
+}
+
+#primary-menu-list>li>a {
+    font-size: 35px;
+}
+
+.site-main {
+    font-size: 30px;
+}
