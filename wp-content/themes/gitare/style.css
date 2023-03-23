@@ -14,7 +14,7 @@ Text Domain:  twenty-fifteen-child
 
 a {
     text-decoration: none;
-    color: green;
+    color: #0E1A2B;
 }
 
 a:hover {
@@ -22,12 +22,12 @@ a:hover {
 }
 
 #site-navigation a {
-    color: green;
+    color: #0E1A2B;
     text-decoration: none;
 }
 
 #site-navigation a:hover {
-    color: black;
+    color: #445267;
 
 }
 
@@ -63,4 +63,8 @@ h1.site-title {
 
 .site-main {
     font-size: 30px;
+}
+
+.stats {
+    display: hidden;
 }
