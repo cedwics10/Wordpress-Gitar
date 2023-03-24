@@ -4,11 +4,10 @@ class statistiques
     private const PARAMS_EXPLODE = [',', ' ', '.', ')', '('];
 
     private array $mots_inutiles;
-    private array $occurences = [];
     private array $nb_mots_phrase;
+    private array $occurences = [];
     private array $phrase_page;
 
-    private string $articleContent = '';
     private string $contenu = '';
     private string $type;
 
@@ -41,7 +40,7 @@ class statistiques
         }
     }
 
-    private function lengthSentences()
+    private function  lengthSentences()
     {
         $this->phrase_page = explode('.', $this->contenu);
         $this->nb_mots_phrase = array_fill(0, count($this->phrase_page), 0);
