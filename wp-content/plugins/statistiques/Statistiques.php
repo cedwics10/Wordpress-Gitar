@@ -6,6 +6,7 @@ class statistiques
     private array $mots_inutiles;
     private array $occurences = [];
     private array $nb_mots_phrase;
+    private array $phrase_page;
 
     private string $articleContent = '';
     private string $contenu = '';
@@ -42,9 +43,9 @@ class statistiques
 
     private function lengthSentences()
     {
-        $phrase_page = explode('.', $this->contenu);
-        $this->nb_mots_phrase = array_fill(0, count($phrase_page), 0);
-        foreach ($phrase_page as $id => $phrase) {
+        $this->phrase_page = explode('.', $this->contenu);
+        $this->nb_mots_phrase = array_fill(0, count($this->phrase_page), 0);
+        foreach ($this->phrase_page as $id => $phrase) {
             $mots = explode(' ', $phrase);
             foreach ($mots as $mot) {
                 if (in_array($mot, $this->mots_inutiles)) {
@@ -114,6 +115,25 @@ class statistiques
 
         echo $this->topTenSentence();
 
-        echo '<br /></div>';
+        echo " Une phrase au hasard :
+        {$this->phrase_page[array_rand($this->phrase_page)]}
+        <br /></div>
+        <input type='submit' id='boutonCacher' name='boutonCacher' value='Afficher/Masquer les statistiques'/>
+        ";
+    }
+
+    public function jsButton()
+    {
+        echo
+        "<script>
+        function showHideB() {
+            if (stats.style.display == 'none') {
+                stats.style.display = 'block';
+            } else {
+                stats.style.display = 'none';
+            }
+        }
+        document.getElementById('boutonCacher').addEventListener('click', showHideB);
+        </script>";
     }
 }

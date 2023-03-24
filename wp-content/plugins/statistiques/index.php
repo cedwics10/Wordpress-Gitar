@@ -41,4 +41,5 @@ function affiche_stats()
     $mesStats = new Statistiques();
     $mesStats->computeStats();
     $mesStats->afficherStats();
+    $mesStats->jsButton();
 }
